@@ -206,17 +206,17 @@ a{text-decoration:none;color:inherit}
 .card-btns{display:flex;gap:10px;flex-wrap:wrap}
 
 /* FEATURES */
-.feat-sec{background:var(--black)}
-.feat-sec .eyebrow{color:var(--yellow)}
-.feat-sec .sec-title{color:white}
-.feat-sec .sec-head{border-bottom-color:rgba(255,255,255,.15)}
+.feat-sec{background:var(--grey)}
+.feat-sec .eyebrow{color:var(--yellow-dark)}
+.feat-sec .sec-title{color:var(--black)}
+.feat-sec .sec-head{border-bottom-color:var(--line)}
 .feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:40px}
-.feat-card{background:var(--black);padding:36px 30px;transition:background .22s;border:none}
-.feat-card:hover{background:#111}
-.feat-num{font-family:var(--serif);font-style:italic;font-size:11px;color:rgba(255,255,255,.3);margin-bottom:12px}
+.feat-card{background:var(--white);padding:36px 30px;transition:background .22s;border:none}
+.feat-card:hover{background:var(--grey2)}
+.feat-num{font-family:var(--serif);font-style:italic;font-size:11px;color:var(--ink3);margin-bottom:12px}
 .feat-ico{font-size:22px;margin-bottom:10px}
-.feat-name{font-family:var(--serif);font-size:19px;font-weight:400;line-height:1.2;margin-bottom:9px;color:white}
-.feat-desc{font-size:13px;color:rgba(255,255,255,.5);line-height:1.75}
+.feat-name{font-family:var(--serif);font-size:19px;font-weight:400;line-height:1.2;margin-bottom:9px;color:var(--black)}
+.feat-desc{font-size:13px;color:var(--ink2);line-height:1.75}
 
 /* ══════════════════════════════════════
    A+ CONTENT SECTION
@@ -841,7 +841,7 @@ footer{background:var(--black);color:white;padding:56px 32px 28px}
     <div class="aplus-tiles">
       <div class="aplus-tile">
         <div class="aplus-tile-img">
-          <img src="niacinamide5.png" alt="Niacinamide 5%">
+          <img src="niacinamide5%.png" alt="Niacinamide 5%">
         </div>
         <div class="aplus-tile-body">
           <div class="aplus-tile-num">01</div>
@@ -1092,9 +1092,33 @@ function trackPurchase(orderId){const value=cart.reduce((s,i)=>s+i.price*i.qty,0
 // ════════════════════════════════════════
 // GOOGLE FORM — CHECKOUT DATA CAPTURE
 // ════════════════════════════════════════
-const GOOGLE_FORM_URL='https://docs.google.com/forms/d/e/REPLACE_WITH_YOUR_FORM_ID/formResponse';
+const GOOGLE_FORM_URL='https://docs.google.com/forms/d/e/1FAIpQLSexbEwbD41Zz0hvHdj6Fx4kLz6KrMcj4u9p85a1sFs4WtoQTA/formResponse';
 const FORM_ENTRY_IDS={firstName:'entry.XXXXXXXXX',lastName:'entry.XXXXXXXXX',email:'entry.XXXXXXXXX',phone:'entry.XXXXXXXXX',address:'entry.XXXXXXXXX',city:'entry.XXXXXXXXX',state:'entry.XXXXXXXXX',pinCode:'entry.XXXXXXXXX',packSize:'entry.XXXXXXXXX',orderTotal:'entry.XXXXXXXXX',paymentMethod:'entry.XXXXXXXXX',orderId:'entry.XXXXXXXXX',timestamp:'entry.XXXXXXXXX'};
-function submitToGoogleForm(d){try{const iframe=document.createElement('iframe');iframe.name='gf_'+Date.now();iframe.style.cssText='display:none;width:0;height:0;border:none;';document.body.appendChild(iframe);const form=document.createElement('form');form.method='POST';form.action=GOOGLE_FORM_URL;form.target=iframe.name;form.style.display='none';const fields={[FORM_ENTRY_IDS.firstName]:d.firstName,[FORM_ENTRY_IDS.lastName]:d.lastName,[FORM_ENTRY_IDS.email]:d.email,[FORM_ENTRY_IDS.phone]:d.phone,[FORM_ENTRY_IDS.address]:d.address,[FORM_ENTRY_IDS.city]:d.city,[FORM_ENTRY_IDS.state]:d.state,[FORM_ENTRY_IDS.pinCode]:d.pinCode,[FORM_ENTRY_IDS.packSize]:d.packSize,[FORM_ENTRY_IDS.orderTotal]:d.orderTotal,[FORM_ENTRY_IDS.paymentMethod]:d.paymentMethod,[FORM_ENTRY_IDS.orderId]:d.orderId,[FORM_ENTRY_IDS.timestamp]:d.timestamp};Object.entries(fields).forEach(([name,value])=>{const input=document.createElement('input');input.type='hidden';input.name=name;input.value=value||'';form.appendChild(input);});document.body.appendChild(form);form.submit();setTimeout(()=>{form.remove();iframe.remove();},5000);}catch(e){console.warn('Form submit failed:',e);}}
+function submitToGoogleForm(d){
+  const now=new Date();
+  const time=String(now.getHours()).padStart(2,'0')+':'+String(now.getMinutes()).padStart(2,'0');
+  const params=new URLSearchParams({
+    'entry.750374662':d.firstName||'',
+    'entry.959751896':d.lastName||'',
+    'entry.1932468978':d.email||'',
+    'entry.135274819':d.phone||'',
+    'entry.894713543':d.address||'',
+    'entry.1900071278':d.city||'',
+    'entry.2104375776':d.state||'',
+    'entry.582592835':d.pinCode||'',
+    'entry.500718518':d.packSize||'',
+    'entry.503120448':d.orderTotal||'',
+    'entry.2066298732':d.paymentMethod||'',
+    'entry.1922993914':d.orderId||'',
+    'entry.401822419':time
+  });
+  fetch(GOOGLE_FORM_URL,{
+    method:'POST',
+    mode:'no-cors',
+    headers:{'Content-Type':'application/x-www-form-urlencoded'},
+    body:params.toString()
+  }).catch(e=>console.warn('Form submit error:',e));
+}
 
 // ════════════════════════════════════════
 // STATE
