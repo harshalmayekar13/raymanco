@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brand Vision — Premium Men's Skincare India</title>
+  <link rel="preconnect" href="https://api.fontshare.com" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&f[]=zodiak@400,700&display=swap" rel="stylesheet">
+  <style>
+    :root,[data-theme="light"] {
+      --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+      --text-sm: clamp(0.875rem, 0.8rem + 0.35vw, 1rem);
+      --text-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+      --text-lg: clamp(1.125rem, 1rem + 0.75vw, 1.5rem);
+      --text-xl: clamp(1.5rem, 1.2rem + 1.25vw, 2.25rem);
+      --text-2xl: clamp(2rem, 1.2rem + 2.5vw, 3.5rem);
+      --text-3xl: clamp(2.5rem, 1rem + 4vw, 5rem);
+      --space-1: 0.25rem; --space-2: 0.5rem; --space-3: 0.75rem; --space-4: 1rem; --space-5: 1.25rem;
+      --space-6: 1.5rem; --space-8: 2rem; --space-10: 2.5rem; --space-12: 3rem; --space-16: 4rem; --space-20: 5rem; --space-24: 6rem;
+      --color-bg:#f7f6f2; --color-surface:#f9f8f5; --color-surface-2:#fbfbf9; --color-surface-offset:#f1eee8; --color-border:#d8d2c9;
+      --color-text:#221f1b; --color-text-muted:#706b64; --color-text-faint:#a9a39b; --color-text-inverse:#fcfbf8;
+      --color-primary:#0f6a67; --color-primary-hover:#0c4e54; --color-success:#437a22; --color-orange:#da7101; --color-blue:#006494;
+      --radius-sm:0.375rem; --radius-md:0.5rem; --radius-lg:0.85rem; --radius-xl:1.25rem; --radius-full:9999px;
+      --shadow-sm:0 1px 2px rgba(34,31,27,.05); --shadow-md:0 10px 30px rgba(34,31,27,.08); --shadow-lg:0 20px 48px rgba(34,31,27,.12);
+      --font-display:'Zodiak', Georgia, serif; --font-body:'Satoshi', Inter, sans-serif;
+      --content-default:1100px; --content-wide:1240px;
+      --transition:180ms cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    [data-theme="dark"] {
+      --color-bg:#121110; --color-surface:#171614; --color-surface-2:#1f1d1a; --color-surface-offset:#23211e; --color-border:#35322d;
+      --color-text:#ece7df; --color-text-muted:#b5aea4; --color-text-faint:#7f786f; --color-text-inverse:#181614;
+      --color-primary:#59a8a3; --color-primary-hover:#82c2be; --color-success:#83c35f; --color-orange:#ffb062; --color-blue:#69add6;
+      --shadow-sm:0 1px 2px rgba(0,0,0,.2); --shadow-md:0 10px 30px rgba(0,0,0,.28); --shadow-lg:0 20px 48px rgba(0,0,0,.36);
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{-webkit-text-size-adjust:none;text-size-adjust:none;scroll-behavior:smooth;scroll-padding-top:6rem}
+    body{min-height:100dvh;font-family:var(--font-body);font-size:var(--text-base);line-height:1.6;background:var(--color-bg);color:var(--color-text)}
+    img,svg{display:block;max-width:100%;height:auto}
+    a{color:inherit;text-decoration:none}
+    button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
+    :focus-visible{outline:2px solid var(--color-primary);outline-offset:3px;border-radius:var(--radius-sm)}
+    .skip-link{position:absolute;left:-9999px;top:0}.skip-link:focus{left:1rem;top:1rem;background:var(--color-surface);padding:.75rem 1rem;z-index:1000;border-radius:var(--radius-md)}
+    .container{width:min(calc(100% - 2rem),var(--content-default));margin-inline:auto}
+    .wide{width:min(calc(100% - 2rem),var(--content-wide));margin-inline:auto}
+    .section{padding-block:clamp(var(--space-12),8vw,var(--space-24));position:relative}
+    .eyebrow{text-transform:uppercase;letter-spacing:.16em;font-size:var(--text-xs);color:var(--color-text-muted);font-weight:700}
+    h1,h2,h3{font-family:var(--font-display);line-height:1.06;text-wrap:balance}
+    h1{font-size:var(--text-3xl)} h2{font-size:var(--text-2xl)} h3{font-size:var(--text-lg)}
+    p,li{max-width:72ch;text-wrap:pretty}
+    .site-header{position:sticky;top:0;z-index:100;background:color-mix(in srgb,var(--color-bg) 80%, transparent);backdrop-filter:blur(16px);border-bottom:1px solid color-mix(in srgb,var(--color-text) 10%, transparent)}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:var(--space-4);padding:.9rem 0}
+    .brand{display:flex;align-items:center;gap:.85rem;font-weight:700}
+    .brand-mark{width:2.5rem;height:2.5rem;border-radius:0.8rem;background:linear-gradient(135deg,var(--color-primary),color-mix(in srgb,var(--color-primary) 50%, var(--color-orange)));display:grid;place-items:center;color:white;box-shadow:var(--shadow-md)}
+    .brand-nav{display:flex;gap:.8rem;flex-wrap:wrap;align-items:center}
+    .brand-nav a{font-size:var(--text-sm);padding:.55rem .8rem;border-radius:var(--radius-full);color:var(--color-text-muted)}
+    .brand-nav a:hover,.brand-nav a.active{background:var(--color-surface);color:var(--color-text)}
+    .theme-toggle{width:2.75rem;height:2.75rem;border-radius:999px;background:var(--color-surface);border:1px solid color-mix(in srgb,var(--color-text) 10%, transparent)}
+    .hero{padding-top:clamp(var(--space-12),10vw,var(--space-24));overflow:hidden}
+    .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(var(--space-8),5vw,var(--space-16));align-items:center}
+    .hero-copy{display:grid;gap:var(--space-6)}
+    .hero-lead{font-size:var(--text-lg);color:var(--color-text-muted)}
+    .hero-card{background:linear-gradient(180deg,color-mix(in srgb,var(--color-surface) 88%, transparent),var(--color-surface-offset));border:1px solid color-mix(in srgb,var(--color-text) 10%, transparent);border-radius:var(--radius-xl);padding:clamp(var(--space-6),4vw,var(--space-10));box-shadow:var(--shadow-lg);position:relative;overflow:hidden}
+    .hero-card::after{content:"";position:absolute;inset:auto -20% -35% auto;width:240px;height:240px;border-radius:50%;background:radial-gradient(circle,var(--color-primary),transparent 70%);opacity:.18;filter:blur(10px)}
+    .tag-row,.pill-row{display:flex;gap:.75rem;flex-wrap:wrap}
+    .pill{display:inline-flex;align-items:center;gap:.5rem;padding:.65rem .9rem;border-radius:999px;background:var(--color-surface);border:1px solid color-mix(in srgb,var(--color-text) 10%, transparent);font-size:var(--text-sm)}
+    .cta-row{display:flex;gap:1rem;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:.9rem 1.1rem;border-radius:999px;font-size:var(--text-sm);font-weight:700;transition:transform var(--transition),background var(--transition),color var(--transition),border-color var(--transition)}
+    .btn:hover{transform:translateY(-1px)}
+    .btn-primary{background:var(--color-primary);color:white}.btn-primary:hover{background:var(--color-primary-hover)}
+    .btn-secondary{background:transparent;border:1px solid color-mix(in srgb,var(--color-text) 14%, transparent)}
+    .product-visual{aspect-ratio:4/5;border-radius:1.5rem;background:linear-gradient(180deg,color-mix(in srgb,var(--color-surface-2) 92%, transparent),var(--color-surface-offset));border:1px solid color-mix(in srgb,var(--color-text) 10%, transparent);padding:1.25rem;box-shadow:var(--shadow-lg);display:grid;place-items:center;position:relative}
+    .bottle{width:min(290px,70%);aspect-ratio:10/18;border-radius:2rem 2rem 1.4rem 1.4rem;background:linear-gradient(180deg,#2f2b27,#181614 35%,#2a2621 70%,#0f6a67 130%);position:relative;box-shadow:0 22px 44px rgba(0,0,0,.24)}
+    .bottle::before{content:"";position:absolute;width:36%;height:10%;left:32%;top:-6%;background:#141311;border-radius:.8rem .8rem .35rem .35rem}
+    .bottle::after{content:"SPF 50\A Men\A Performance";white-space:pre;position:absolute;inset:21% 14% auto;display:block;text-align:center;font-family:var(--font-body);font-weight:700;letter-spacing:.08em;font-size:clamp(.8rem,1vw,1rem);color:#efe8de}
+    .orbit{position:absolute;border:1px solid color-mix(in srgb,var(--color-primary) 28%, transparent);border-radius:999px}
+    .orbit.one{width:115%;height:115%}.orbit.two{width:140%;height:140%;animation:spin 24s linear infinite}
+    .stat-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--space-4);margin-top:var(--space-8)}
+    .stat{background:var(--color-surface);border:1px solid color-mix(in srgb,var(--color-text) 10%, transparent);border-radius:var(--radius-lg);padding:var(--space-5)}
+    .stat strong{display:block;font-size:var(--text-xl);font-family:var(--font-display)}
+    .grid-2,.grid-3,.grid-4{display:grid;gap:var(--space-5)} .grid-2{grid-template-columns:repeat(2,1fr)} .grid-3{grid-template-columns:repeat(3,1fr)} .grid-4{grid-template-columns:repeat(4,1fr)}
+    .card{background:var(--color-surface);border:1px solid color-mix(in srgb,var(--color-text) 10%, transparent);border-radius:var(--radius-xl);padding:var(--space-6);box-shadow:var(--shadow-sm)}
+    .card h3,.card h4{margin-bottom:.75rem}
+    .soft{color:var(--color-text-muted)}
+    .list{display:grid;gap:.9rem;margin-top:var(--space-4)}
+    .list li{list-style:none;display:flex;gap:.8rem;align-items:flex-start}
+    .check,.dot{flex:0 0 auto;width:1.35rem;height:1.35rem;border-radius:50%;margin-top:.15rem;display:grid;place-items:center;font-size:.8rem}
+    .check{background:color-mix(in srgb,var(--color-success) 18%, transparent);color:var(--color-success)}
+    .dot{background:color-mix(in srgb,var(--color-orange) 20%, transparent);color:var(--color-orange)}
+    .section-head{display:grid;gap:.8rem;margin-bottom:var(--space-8)}
+    .market-bars{display:grid;gap:1rem;margin-top:var(--space-5)}
+    .bar-track{height:14px;background:var(--color-surface-offset);border-radius:999px;overflow:hidden;border:1px solid color-mix(in srgb,var(--color-text) 8%, transparent)}
+    .bar-fill{height:100%;border-radius:999px;background:linear-gradient(90deg,var(--color-primary),color-mix(in srgb,var(--color-orange) 65%, var(--color-primary)))}
+    .table-wrap{overflow:auto;border-radius:var(--radius-xl);border:1px solid color-mix(in srgb,var(--color-text) 10%, transparent);background:var(--color-surface)}
+    table{width:100%;border-collapse:collapse;font-size:var(--text-sm)} th,td{padding:1rem;text-align:left;border-bottom:1px solid color-mix(in srgb,var(--color-text) 8%, transparent);vertical-align:top} th{font-size:var(--text-xs);text-transform:uppercase;letter-spacing:.08em;color:var(--color-text-muted)}
+    .segment-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-5)}
+    .roadmap{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-5)}
+    .timeline-card{position:relative;padding-top:2.5rem}.timeline-card::before{content:attr(data-year);position:absolute;top:0;left:0;font-size:var(--text-xs);letter-spacing:.15em;text-transform:uppercase;color:var(--color-text-muted);font-weight:700}
+    .allocation{display:grid;gap:.9rem}.allocation-row{display:grid;grid-template-columns:110px 1fr 60px;gap:1rem;align-items:center}
+    .quote-box{padding:var(--space-6);border-radius:var(--radius-xl);background:linear-gradient(135deg,color-mix(in srgb,var(--color-primary) 12%, var(--color-surface)),var(--color-surface));border:1px solid color-mix(in srgb,var(--color-primary) 24%, transparent)}
+    .footer{padding:var(--space-10) 0 var(--space-16);color:var(--color-text-muted)}
+    .reveal{opacity:1}
+    @supports (animation-timeline: view()){
+      .reveal{opacity:0;animation:reveal-fade linear both;animation-timeline:view();animation-range:entry 0% entry 55%}
+      .reveal-up{clip-path:inset(100% 0 0 0);animation:reveal-clip linear both;animation-timeline:view();animation-range:entry 0% entry 75%}
+      @keyframes reveal-fade{to{opacity:1}}
+      @keyframes reveal-clip{to{clip-path:inset(0 0 0 0)}}
+    }
+    @keyframes spin{to{transform:rotate(360deg)}}
+    @media (max-width: 1024px){
+      .hero-grid,.grid-2,.grid-3,.grid-4,.segment-grid,.roadmap,.stat-strip{grid-template-columns:1fr 1fr}
+      .brand-nav{display:none}
+    }
+    @media (max-width: 700px){
+      html{scroll-padding-top:5.5rem}
+      .hero-grid,.grid-2,.grid-3,.grid-4,.segment-grid,.roadmap,.stat-strip{grid-template-columns:1fr}
+      .nav{align-items:flex-start}
+      .brand{padding-top:.15rem}
+      .allocation-row{grid-template-columns:88px 1fr 48px}
+    }
+    @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="#top" aria-label="Go to top">
+        <span class="brand-mark" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M6 18c3.5-6.5 8.5-10.5 12-12"></path>
+            <path d="M7 7c3.5 2 6 5 7 10"></path>
+          </svg>
+        </span>
+        <span>Brand Vision</span>
+      </a>
+      <nav class="brand-nav" aria-label="Section navigation">
+        <a href="#problem">Problem</a>
+        <a href="#market">Market</a>
+        <a href="#competition">Competition</a>
+        <a href="#product">Product</a>
+        <a href="#gtm">Go-to-market</a>
+        <a href="#economics">Economics</a>
+        <a href="#roadmap">Roadmap</a>
+        <a href="#fundraise">Fundraise</a>
+      </nav>
+      <button class="theme-toggle" data-theme-toggle aria-label="Switch theme">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero section" id="top">
+      <div class="wide hero-grid">
+        <div class="hero-copy reveal">
+          <span class="eyebrow">India premium skincare thesis</span>
+          <h1>Building India’s premium men’s skincare brand.</h1>
+          <p class="hero-lead">Starting with sunscreen, then expanding into a full grooming ecosystem built for Indian skin, climate, and daily routines.</p>
+          <div class="tag-row">
+            <span class="pill">Founder: Your Name</span>
+            <span class="pill">Tagline: Built for Indian men’s skin</span>
+            <span class="pill">Launch wedge: Performance sunscreen</span>
+          </div>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="#product">See the product thesis</a>
+            <a class="btn btn-secondary" href="#fundraise">View the fundraising ask</a>
+          </div>
+          <div class="stat-strip">
+            <div class="stat"><span class="eyebrow">Category growth</span><strong>12–18%</strong><span class="soft">Men’s skincare CAGR</span></div>
+            <div class="stat"><span class="eyebrow">Premium growth</span><strong>18–25%</strong><span class="soft">Premium skincare CAGR</span></div>
+            <div class="stat"><span class="eyebrow">Target pricing</span><strong>₹499–699</strong><span class="soft">ASP range</span></div>
+            <div class="stat"><span class="eyebrow">Seed ask</span><strong>₹50L–₹2Cr</strong><span class="soft">Capital sought</span></div>
+          </div>
+        </div>
+        <div class="product-visual reveal-up" aria-label="Concept product visual">
+          <div class="orbit one"></div>
+          <div class="orbit two"></div>
+          <div class="bottle" role="img" aria-label="Men's sunscreen bottle concept"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="problem">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Problem</span>
+          <h2>Indian men are still underserved in skincare.</h2>
+          <p class="soft">Most brands target women or stay narrow in beard, fragrance, and hair, leaving daily prevention and skin health underbuilt.</p>
+        </div>
+        <div class="grid-2">
+          <article class="card reveal">
+            <h3>Where the gap shows up</h3>
+            <ul class="list">
+              <li><span class="dot">•</span><span>Little innovation in sun protection, anti-pollution care, skin health, and prevention-first daily use.</span></li>
+              <li><span class="dot">•</span><span>Current offerings often feel generic, female-adapted, or built without Indian climate realities in mind.</span></li>
+              <li><span class="dot">•</span><span>Packaging and brand language often fail to create a credible premium men’s skincare identity.</span></li>
+            </ul>
+          </article>
+          <article class="card reveal">
+            <h3>Current pain points</h3>
+            <ul class="list">
+              <li><span class="check">✓</span><span>Sticky formulas that feel heavy in humid weather.</span></li>
+              <li><span class="check">✓</span><span>Visible white cast and poor finish on Indian skin tones.</span></li>
+              <li><span class="check">✓</span><span>Low trust due to weak product performance and low perceived science.</span></li>
+              <li><span class="check">✓</span><span>Feminine packaging that does not resonate with male first-time users.</span></li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="market">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Market opportunity</span>
+          <h2>A large category with a premium white-space wedge.</h2>
+          <p class="soft">The best opening is not the entire grooming market; it is premium skincare for Indian men with repeatable daily use.</p>
+        </div>
+        <div class="grid-2">
+          <div class="card reveal">
+            <h3>Market sizing</h3>
+            <div class="market-bars">
+              <div>
+                <div style="display:flex;justify-content:space-between;gap:1rem"><span>Men’s grooming</span><strong>₹14,000–18,000 Cr</strong></div>
+                <div class="bar-track"><div class="bar-fill" style="width:100%"></div></div>
+              </div>
+              <div>
+                <div style="display:flex;justify-content:space-between;gap:1rem"><span>Men’s skincare</span><strong>₹2,500–3,500 Cr</strong></div>
+                <div class="bar-track"><div class="bar-fill" style="width:22%"></div></div>
+              </div>
+              <div>
+                <div style="display:flex;justify-content:space-between;gap:1rem"><span>Premium skincare</span><strong>₹600–900 Cr</strong></div>
+                <div class="bar-track"><div class="bar-fill" style="width:6%"></div></div>
+              </div>
+            </div>
+          </div>
+          <div class="card reveal">
+            <h3>Why it is growing</h3>
+            <ul class="list">
+              <li><span class="check">✓</span><span>Urban lifestyles and appearance awareness are pushing skincare into daily male routines.</span></li>
+              <li><span class="check">✓</span><span>Social media and creator education are making prevention, sunscreen, and skin health more mainstream.</span></li>
+              <li><span class="check">✓</span><span>D2C distribution and premiumization make niche brands easier to launch and scale.</span></li>
+              <li><span class="check">✓</span><span>Men’s skincare CAGR is estimated at 12–18%, while premium is growing even faster at 18–25%.</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="timing">
+      <div class="container">
+        <div class="grid-2">
+          <div class="quote-box reveal">
+            <span class="eyebrow">Why now</span>
+            <h2 style="margin-top:.5rem">Category awareness is rising before category leadership is locked.</h2>
+            <p style="margin-top:1rem">Men increasingly care about skin health, appearance, confidence, and prevention. The market is still fragmented, which creates room for a focused premium leader.</p>
+          </div>
+          <div class="card reveal">
+            <h3>Investor timing advantage</h3>
+            <ul class="list">
+              <li><span class="dot">•</span><span>Consumer behavior has already shifted, but brand ownership is still weak.</span></li>
+              <li><span class="dot">•</span><span>There is no single breakout brand that fully owns premium performance skincare for Indian men.</span></li>
+              <li><span class="dot">•</span><span>Early category leadership is still available with a sharp product-first strategy.</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="whitespace">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">White space</span>
+          <h2>What is missing today is a real premium men’s skincare brand.</h2>
+        </div>
+        <div class="grid-4">
+          <div class="card reveal"><h3>Climate-specific</h3><p class="soft">Built for heat, sweat, humidity, outdoor commute, and pollution-heavy daily life.</p></div>
+          <div class="card reveal"><h3>Masculine design</h3><p class="soft">Clear, premium packaging that feels deliberate rather than adapted from women’s skincare.</p></div>
+          <div class="card reveal"><h3>Scientific ingredients</h3><p class="soft">Credible formulation story with prevention and performance as the core promise.</p></div>
+          <div class="card reveal"><h3>High performance</h3><p class="soft">Products must work visibly in texture, finish, durability, and repeatability.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="competition">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Competitive landscape</span>
+          <h2>Strong brands exist, but no one fully owns the premium performance position.</h2>
+        </div>
+        <div class="table-wrap reveal">
+          <table>
+            <thead>
+              <tr><th>Brand</th><th>Positioning</th><th>Price</th><th>Strength</th><th>Weakness</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Minimalist</td><td>Science-led</td><td>₹399–699</td><td>Trust</td><td>Gender neutral, not male-specific</td></tr>
+              <tr><td>The Man Company</td><td>Premium men</td><td>₹299–599</td><td>Branding</td><td>Limited skincare depth</td></tr>
+              <tr><td>Beardo</td><td>Youth lifestyle</td><td>₹299–599</td><td>Strong awareness</td><td>Commodity feel</td></tr>
+              <tr><td>Ustraa</td><td>Masculine</td><td>₹399–699</td><td>Loyal base</td><td>Limited premium stretch</td></tr>
+              <tr><td>Nivea Men</td><td>Mass</td><td>₹199–399</td><td>Distribution</td><td>Low premium appeal</td></tr>
+              <tr><td>Garnier Men</td><td>Mass</td><td>₹199–349</td><td>Awareness</td><td>Weak innovation</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="grid-2" style="margin-top:var(--space-5)">
+          <div class="card reveal">
+            <h3>Pricing signal</h3>
+            <p class="soft">Representative market pricing shows a premium band already exists, with The Man Company SPF 50 around ₹299–335 and Ustraa SPF 50 around ₹599.</p>
+          </div>
+          <div class="quote-box reveal">
+            <span class="eyebrow">Investor insight</span>
+            <h3 style="margin-top:.45rem">No brand fully owns “premium performance skincare for Indian men.”</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="product">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Entry product strategy</span>
+          <h2>Start with sunscreen because it trains the category and repeats often.</h2>
+          <p class="soft">Sunscreen is the right wedge: daily use, visible value, easy education, repeat purchase, and strong cross-sell into a broader skincare stack.</p>
+        </div>
+        <div class="grid-2">
+          <article class="card reveal">
+            <h3>Why sunscreen first</h3>
+            <ul class="list">
+              <li><span class="check">✓</span><span>Daily-use habit product with natural repeat frequency.</span></li>
+              <li><span class="check">✓</span><span>Clear consumer problem: tanning, UV damage, pollution, oily skin, and commute exposure.</span></li>
+              <li><span class="check">✓</span><span>Visible product payoff helps explain premium pricing and improve trust.</span></li>
+              <li><span class="check">✓</span><span>Creates an easy bridge into face wash, moisturizer, serum, and eye care.</span></li>
+            </ul>
+          </article>
+          <article class="card reveal">
+            <h3>Performance sunscreen concept</h3>
+            <div class="pill-row">
+              <span class="pill">SPF 50 PA++++</span>
+              <span class="pill">Matte finish</span>
+              <span class="pill">Sweat resistant</span>
+              <span class="pill">Zero white cast</span>
+              <span class="pill">Oil control</span>
+              <span class="pill">Anti-pollution</span>
+              <span class="pill">Brightening support</span>
+              <span class="pill">Lightweight gel texture</span>
+            </div>
+            <p class="soft" style="margin-top:1rem">Positioning: <strong>Built for Indian men’s skin.</strong></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="customer">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Target customer</span>
+          <h2>Three segments, one premium ladder.</h2>
+        </div>
+        <div class="segment-grid">
+          <article class="card reveal"><h3>18–24</h3><p class="soft">College consumers, aspirational buyers, social-media influenced, budget conscious, ideal for awareness and trial.</p></article>
+          <article class="card reveal"><h3>25–34</h3><p class="soft">Urban professionals, main revenue segment, strongest premium adoption, highest repeat potential early on.</p></article>
+          <article class="card reveal"><h3>30–45</h3><p class="soft">Premium buyers with higher LTV, more loyalty, and stronger appetite for multi-product routines.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="gtm">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Go-to-market</span>
+          <h2>Build digitally first, then widen distribution where discovery is fastest.</h2>
+        </div>
+        <div class="roadmap">
+          <article class="card timeline-card reveal" data-year="Phase 1">
+            <h3>D2C + marketplaces</h3>
+            <p class="soft">Website, Amazon, Nykaa, and Flipkart create reach plus high-intent discovery for the first product cycle.</p>
+          </article>
+          <article class="card timeline-card reveal" data-year="Phase 2">
+            <h3>Quick commerce</h3>
+            <p class="soft">Blinkit, Zepto, and Instamart help capture convenience-led replenishment and urban urgency buys.</p>
+          </article>
+          <article class="card timeline-card reveal" data-year="Phase 3">
+            <h3>Offline premium</h3>
+            <p class="soft">Gyms, salons, dermatologists, and barbershops add trust, sampling, and targeted visibility.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="marketing">
+      <div class="container">
+        <div class="grid-2">
+          <div class="card reveal">
+            <span class="eyebrow">Growth channels</span>
+            <h2 style="margin-top:.5rem">Acquire with education, not just ads.</h2>
+            <ul class="list">
+              <li><span class="dot">•</span><span>Paid: Instagram ads, Meta retargeting, Amazon ads.</span></li>
+              <li><span class="dot">•</span><span>Organic: influencer content, educational reels, founder-led branding.</span></li>
+              <li><span class="dot">•</span><span>Partnerships: dermatologists, fitness creators, and men’s lifestyle creators.</span></li>
+            </ul>
+          </div>
+          <div class="quote-box reveal">
+            <span class="eyebrow">Brand strategy</span>
+            <h3 style="margin-top:.5rem">The brand should teach men why daily prevention matters, then win on performance and identity.</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="economics">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Unit economics</span>
+          <h2>Premium pricing supports healthy contribution potential.</h2>
+        </div>
+        <div class="grid-3">
+          <div class="card reveal"><span class="eyebrow">ASP</span><h3>₹499–699</h3><p class="soft">Premium entry pricing that still stays accessible for urban D2C purchase.</p></div>
+          <div class="card reveal"><span class="eyebrow">COGS</span><h3>₹80–130</h3><p class="soft">Room for formulation quality while preserving attractive gross margin.</p></div>
+          <div class="card reveal"><span class="eyebrow">Gross margin</span><h3>70–78%</h3><p class="soft">Healthy structure for brand building and channel expansion.</p></div>
+          <div class="card reveal"><span class="eyebrow">CAC</span><h3>₹180–400</h3><p class="soft">Viable if repeat and cross-sell are executed early.</p></div>
+          <div class="card reveal"><span class="eyebrow">Repeat rate</span><h3>35–45%</h3><p class="soft">Key operating proof point for sunscreen-led retention.</p></div>
+          <div class="card reveal"><span class="eyebrow">LTV</span><h3>₹1,500–4,000</h3><p class="soft">Upside improves materially once the product ecosystem expands.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="roadmap">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Growth roadmap</span>
+          <h2>Move from one hero SKU to a complete skincare ecosystem.</h2>
+        </div>
+        <div class="roadmap">
+          <article class="card timeline-card reveal" data-year="Year 1">
+            <h3>Sunscreen</h3>
+            <p class="soft">Launch the hero product, refine channel fit, and prove repeat behavior.</p>
+          </article>
+          <article class="card timeline-card reveal" data-year="Year 2">
+            <h3>Face wash + moisturizer</h3>
+            <p class="soft">Build the daily routine and increase basket size from a single-product relationship.</p>
+          </article>
+          <article class="card timeline-card reveal" data-year="Year 3">
+            <h3>Serum, eye cream, beard care</h3>
+            <p class="soft">Expand into higher-LTV problem solving and deepen long-term brand loyalty.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="thesis">
+      <div class="container">
+        <div class="grid-2">
+          <div class="quote-box reveal">
+            <span class="eyebrow">Investment thesis</span>
+            <h2 style="margin-top:.5rem">This is not a sunscreen company.</h2>
+            <p style="margin-top:1rem">It is a scalable premium men’s skincare platform with white space, strong margins, repeat purchase, and subscription potential.</p>
+          </div>
+          <div class="card reveal">
+            <h3>Why invest</h3>
+            <ul class="list">
+              <li><span class="check">✓</span><span>Large and growing category.</span></li>
+              <li><span class="check">✓</span><span>Fragmented competitive field with no dominant leader.</span></li>
+              <li><span class="check">✓</span><span>High-margin entry product with repeat potential.</span></li>
+              <li><span class="check">✓</span><span>Clear platform expansion beyond one SKU.</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="fundraise">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Fundraising ask</span>
+          <h2>Seeking ₹50L–₹2Cr in seed capital.</h2>
+          <p class="soft">The goal is to launch well, build early trust, and prove repeat-led economics fast.</p>
+        </div>
+        <div class="grid-2">
+          <article class="card reveal">
+            <h3>Use of funds</h3>
+            <div class="allocation">
+              <div class="allocation-row"><span>Inventory</span><div class="bar-track"><div class="bar-fill" style="width:30%"></div></div><strong>30%</strong></div>
+              <div class="allocation-row"><span>Marketing</span><div class="bar-track"><div class="bar-fill" style="width:30%"></div></div><strong>30%</strong></div>
+              <div class="allocation-row"><span>Branding</span><div class="bar-track"><div class="bar-fill" style="width:20%"></div></div><strong>20%</strong></div>
+              <div class="allocation-row"><span>Team</span><div class="bar-track"><div class="bar-fill" style="width:10%"></div></div><strong>10%</strong></div>
+              <div class="allocation-row"><span>Operations</span><div class="bar-track"><div class="bar-fill" style="width:10%"></div></div><strong>10%</strong></div>
+            </div>
+          </article>
+          <article class="card reveal">
+            <h3>Milestones</h3>
+            <ul class="list">
+              <li><span class="dot">•</span><span>Product launch completed.</span></li>
+              <li><span class="dot">•</span><span>10K customers acquired.</span></li>
+              <li><span class="dot">•</span><span>₹1Cr ARR achieved.</span></li>
+              <li><span class="dot">•</span><span>Repeat rate above 35%.</span></li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>Single-page investor website concept built from the 15-slide deck structure, with sticky navigation and section-based storytelling.</p>
+    </div>
+  </footer>
+
+  <script>
+    (function(){
+      const toggle=document.querySelector('[data-theme-toggle]');
+      const root=document.documentElement;
+      let theme=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';
+      root.setAttribute('data-theme',theme);
+      const renderIcon=()=>{toggle.innerHTML=theme==='dark'
+        ? '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>'
+        : '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+        toggle.setAttribute('aria-label','Switch to '+(theme==='dark'?'light':'dark')+' mode');
+      };
+      renderIcon();
+      toggle.addEventListener('click',()=>{theme=theme==='dark'?'light':'dark';root.setAttribute('data-theme',theme);renderIcon();});
+
+      const links=[...document.querySelectorAll('.brand-nav a')];
+      const sections=links.map(link=>document.querySelector(link.getAttribute('href'))).filter(Boolean);
+      const observer=new IntersectionObserver((entries)=>{
+        entries.forEach(entry=>{
+          if(entry.isIntersecting){
+            links.forEach(l=>l.classList.toggle('active', l.getAttribute('href')==='#'+entry.target.id));
+          }
+        });
+      },{rootMargin:'-35% 0px -55% 0px',threshold:0});
+      sections.forEach(section=>observer.observe(section));
+    })();
+  </script>
+</body>
+</html>
